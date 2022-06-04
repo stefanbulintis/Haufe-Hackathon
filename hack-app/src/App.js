@@ -1,6 +1,5 @@
 import React from 'react';
-import Map from './components/Map';
-import DeleteMe from './components/DeleteMe';
+// import Map from './components/Map';
 import './App.css';
 
 // TODO: start here
@@ -8,8 +7,8 @@ import './App.css';
 function App() {
   return (
     <>
-      <Map/>
-      <DeleteMe/>
+      <h1>Haufe Hackathon</h1>
+      {/* <Map/> */}
     </>
   );
 }
