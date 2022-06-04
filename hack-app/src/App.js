@@ -38,9 +38,8 @@ function App() {
   // })
 console.log("here", points)
   return (
-    <>
+    <> 
     <div>
-      
     </div>
       {<Map/>}
       {<Table/>}
