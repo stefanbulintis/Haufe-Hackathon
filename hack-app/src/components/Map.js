@@ -8,7 +8,9 @@ const Haufe = [45.75951, 21.220871];
 
 function Map() {
   return (
+    
     <MapContainer 
+    
       center={Haufe} 
       zoom={13} 
       scrollWheelZoom={true}
@@ -29,6 +31,7 @@ function Map() {
         </Popup>
       </Marker>
     </MapContainer>
+ 
   );
 }
 
