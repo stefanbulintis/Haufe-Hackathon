@@ -4,8 +4,9 @@ import './App.css';
 import Table from './components/Table';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
-import {Routes, Route, useNavigate} from "react-router-dom";
-import React from "react";
+import {Routes, useNavigate} from "react-router-dom";
+import Navbar from './Navigation/Navbar';
+//import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,18 +29,19 @@ export async function getAllPoints() {
 
 function App() {
   const [points, SetPoints] = useState([]);
-  // useEffect(() => {
-  //   async function Points(){
-  //     const Points = await getAllPoints();
-  //     console.log(Points);
-  //     SetPoints(Points)
-  //   }
-  //   Points();
-  // })
+  useEffect(() => {
+    async function Points(){
+      const Points = await getAllPoints();
+      console.log(Points);
+      SetPoints(Points)
+    }
+    Points();
+  })
 console.log("here", points)
   return (
     <> 
     <div>
+      <Navbar></Navbar>
     </div>
       {<Map/>}
       {<Table/>}

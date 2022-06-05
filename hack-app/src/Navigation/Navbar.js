@@ -1,9 +1,5 @@
 import React from "react";
 import './Navbar.css';
-import Nav from "react-bootstrap/Nav";
-import { LinkContainer } from "react-router-bootstrap";
-import {Routes} from "react-router-dom"
-
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,19 +9,19 @@ const Navbar = () => {
      
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="/Map.js">
+              Map <span className="sr-only"></span>
+            </a>
+          </li>
           <li className="nav-item">
-          <Nav activeKey={window.location.pathname}>
-            <LinkContainer to="/Map.js">
-              <Nav.Link>Map</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/Table.js">
-              <Nav.Link>Table</Nav.Link>
-            </LinkContainer>
-          </Nav>
+            <a className="nav-link" href="/Table.js">
+              Table
+            </a>
           </li>
         </ul>
       </div>
-      <Routes />
+      
     </nav>
   );
 };
