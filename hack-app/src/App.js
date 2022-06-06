@@ -33,10 +33,16 @@ function App() {
     async function Points(){
       const Points = await getAllPoints();
       console.log(Points);
-      SetPoints(Points)
+      SetPoints(Points);
     }
     Points();
   })
+
+  // useEffect(()=>{
+  //   fetch("https://data.primariatm.ro/api/3/action/datastore_search?resource_id=d0134630-84d9-40b8-9bcb-dfdc926d66ab&limit=5") 
+  //    .then(resp=>resp.json())
+  //    .then(resp=>console.log(resp));
+  // })
 console.log("here", points)
   return (
     <> 
